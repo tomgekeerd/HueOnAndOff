@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8550B35850BA3B18D237E8B6C641968EEC5B1F0D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8550B35850BA3B18D237E8B6C641968EEC5B1F0D" : 0,
+    "BABF2D0599CA6E23FE31A3B1C37F407CA3D850D7" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3B0FE0D6-86C6-4532-A3BD-C7A90CCCEDEE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8550B35850BA3B18D237E8B6C641968EEC5B1F0D" : "HueOnAndOff\/",
+    "BABF2D0599CA6E23FE31A3B1C37F407CA3D850D7" : "PhilipsHueSDK-iOS-OSX"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HueQuickStartApp-OSX",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "QuickStartApp_OSX\/HueQuickStartApp-OSX.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tomgekeerd\/HueOnAndOff.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8550B35850BA3B18D237E8B6C641968EEC5B1F0D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PhilipsHue\/PhilipsHueSDK-iOS-OSX.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BABF2D0599CA6E23FE31A3B1C37F407CA3D850D7"
+    }
+  ]
+}
