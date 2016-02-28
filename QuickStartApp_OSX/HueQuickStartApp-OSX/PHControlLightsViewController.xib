@@ -13,11 +13,12 @@
                 <outlet property="bridgeLastHeartbeatLabel" destination="vZg-7w-jRY" id="6Fm-fY-afc"/>
                 <outlet property="randomLightsButton" destination="ton-7e-sAB" id="wbb-Lq-oAD"/>
                 <outlet property="statusMenu" destination="To0-BC-bWf" id="op0-j4-PnQ"/>
+                <outlet property="turnOffButton" destination="y7a-hR-Q7V" id="dxz-Tn-VpJ"/>
                 <outlet property="view" destination="1" id="2"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="1">
             <rect key="frame" x="0.0" y="0.0" width="405" height="264"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -119,6 +120,12 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="V5A-jK-yMc"/>
+                <menuItem title="Turn off" id="y7a-hR-Q7V">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="turnOff:" target="-2" id="wyW-nE-xJU"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="Randomize" id="ton-7e-sAB">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>

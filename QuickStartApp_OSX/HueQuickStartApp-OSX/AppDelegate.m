@@ -79,7 +79,6 @@
 
 - (void)applicationDidEnterBackground:(NSApplication *)application {
     // Stop heartbeat
-    [self disableLocalHeartbeat];
     
     // Remove any open popups / sheets
     [self hideCurrentSheetWindow];

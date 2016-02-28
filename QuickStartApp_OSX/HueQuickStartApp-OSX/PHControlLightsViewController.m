@@ -9,12 +9,15 @@
 
 #define MAX_HUE 65535
 
-@interface PHControlLightsViewController ()
+@interface PHControlLightsViewController () {
+    BOOL turnedOn;
+}
     @property (strong) IBOutlet NSMenu *statusMenu;
     @property (nonatomic,weak) IBOutlet NSTextField *bridgeIdLabel;
     @property (nonatomic,weak) IBOutlet NSMenuItem *bridgeIpLabel;
     @property (nonatomic,weak) IBOutlet NSMenuItem *bridgeLastHeartbeatLabel;
     @property (nonatomic,weak) IBOutlet NSMenuItem *randomLightsButton;
+    @property (nonatomic,weak) IBOutlet NSMenuItem *turnOffButton;
 
 @end
 
@@ -25,7 +28,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-
+        turnedOn = YES;
     }
     return self;
 }
@@ -132,8 +135,21 @@
     }
 }
 
+- (IBAction)turnOff:(id)sender {
+    if (turnedOn == YES) {
+        turnedOn = NO;
+        self.turnOffButton.title = @"Turn on";
+    } else {
+        turnedOn = YES;
+        self.turnOffButton.title = @"Turn off";
+    }
+}
+
 - (void) receiveWakeNote: (NSNotification*) note
 {
+    if (turnedOn) {
+        
+    
     PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
     PHBridgeSendAPI *bridgeSendAPI = [[PHBridgeSendAPI alloc] init];
     
@@ -155,12 +171,14 @@
             [self.randomLightsButton setEnabled:YES];
         }];
     }
+    }
 
 }
 
 - (void) receiveSleepNote: (NSNotification*) note
 {
-    NSLog(@"Sleep");
+    if (turnedOn) {
+        
     
     PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
     PHBridgeSendAPI *bridgeSendAPI = [[PHBridgeSendAPI alloc] init];
@@ -182,6 +200,7 @@
             
             [self.randomLightsButton setEnabled:YES];
         }];
+    }
     }
 
 }
